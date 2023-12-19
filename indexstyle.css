@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('cake shop.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+/* HEADER */
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-family: 'Lilita One', sans-serif;
+}
+
+.navbar .logo {
+    margin: 0;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(236, 225, 213);
+    font-size: 1.3rem;
+}
+
+a:hover {
+    color: black;
+}
+
+.navbar .toggle_btn {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    background-color: black;
+    color: rgb(236, 225, 213);
+    padding: 0.7rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: normal;
+    cursor: pointer;
+    transition: scale 0.2s ease;
+}
+
+.action_btn:hover {
+    scale: 1.20;
+    color: white;
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-transform: uppercase;
+    font-family: 'Lilita One', sans-serif;
+}
+
+.dropdown_menu.open {
+    height: 240px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* HOME */
+section#home {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+#home h1 {
+    font-size: 70px;
+    margin-bottom: 1rem;
+    margin: 70px 0px 0px 35px;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-family: 'Lilita One', sans-serif;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-style: bold;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 50px 0px 0px 35px;
+}
+
+/* BUTTON */
+.btn {
+    background-color: black;
+    margin: 50px 0px 0px 30px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: flex;
+    border-radius: 20px;
+    padding: 0.7rem 1rem;
+    transition: scale 0.2s ease;
+    width: 250px;
+}
+
+.btn a {
+    color: white;
+    font-size: 30px;
+    font-family: 'Lilita One', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.btn:hover {
+    scale: 1.05;
+    box-shadow: 0px 12px 16px 0px rgb(236, 225, 213), 0px 17px 15px 0px rgb(236, 225, 213);
+}
+
+.btn:active {
+    scale: 0.95;
+}
+
+/*CONTACT FORM*/
+.contact {
+    min-height: 100vh;
+    padding: 35px;
+    text-align: center;
+}
+.container {
+    max-width: 1200px;
+    min-height: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(70px);
+}
+.container h2 {
+    font-family: 'Lilita One', sans-serif;
+    font-weight: normal;
+    font-size: 50px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+    text-transform: uppercase;
+}
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+}
+.contact-form {
+    text-align: left;
+}
+.contact-form h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    color: white;
+    justify-content: center;
+    font-family: 'Lilita One', sans-serif;
+    font-weight: normal;
+}
+.form-group {
+    margin-bottom: 6px;
+    margin-left: 30px;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 3px;
+    border-color: white;
+    background-color: transparent;
+    border-style: solid;
+}
+.msg {
+    padding: 35px;
+}
+input:focus
+textarea:focus {
+    outline: none;
+    box-shadow: transparent;
+}
+.btn2 {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.btn2:hover {
+    background-color: #fff;
+}
+.contact-info {
+    text-align: left;
+}
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+.contact-info p {
+    margin-bottom: 10px;
+    color: white;
+}
+.contact-info i {
+    color: #4caf50;
+    margin-right: 10px;
+}
+/* RESPONSIVE DESIGN*/
+@media(max-width:992px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }    
+
+    .navbar .toggle_btn {
+        display: block;
+
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media(max-width:576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+@media (max-width:671px) {
+    #home h1 {
+        display: block;
+        font-size: 40px;
+    }
+    p {
+        display: block;
+        font-size: 13px;
+    }
+    .btn {
+        display: block;
+    }
+}
+@media (max-width: 671px) {
+    .container {
+        padding: 20px;
+    }
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .contact-form h3 {
+        margin-left: 40px;
+        font-size: 25px;
+    }
+}
